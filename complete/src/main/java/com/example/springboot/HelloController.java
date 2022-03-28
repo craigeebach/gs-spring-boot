@@ -34,6 +34,11 @@ public class HelloController {
 		return "Greetings from Azure Quickstart 2 "+name;
 	}
 
+	@GetMapping("/oops")
+	public String oops() {
+		throw new RuntimeException("Oops, I messed up");
+	}
+
 	@GetMapping("/person")
 	public Person person(@RequestParam(required = false) String name) {
 		Faker faker = new Faker();
