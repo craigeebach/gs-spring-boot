@@ -18,6 +18,7 @@ public class HelloControllerIT {
     @Test
     public void getHello() throws Exception {
         ResponseEntity<String> response = template.getForEntity("/", String.class);
-        assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
+        //assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
+        assertThat(response.getBody()).isEqualTo("GS Spring Boot (Azure Quickstart 2) Index page");
     }
 }
